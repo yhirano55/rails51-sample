@@ -3,12 +3,52 @@
   <head>
     <title>Rails51Sample</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/solarized-dark.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
   </head>
-
   <body>
-    <%= yield %>
+    <div class="wrapper">
+      <main>
+        <!--共通要素-->
+        <div class="main-header">
+          <ol class="breadcrumb">
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">user</a></li>
+            <li><a href="#">name</a></li>
+            <li><a href="#">project</a></li>
+            <li class="active"><strong>build 787</strong></li>
+          </ol>
+        </div>
+        <div class="main-content">
+          <div class="container-fluid">
+            <!--共通要素-->
+            <div class="alert alert-danger" role="alert">
+              <strong>Oh snap!</strong> Change a few things up and try submitting again.
+            </div>
+            <%= yield %>
+          </div>
+        </div>
+        <div class="main-footer">
+          <p>
+            <strong>APP Name</strong>
+            on
+            <%= Rails.env %>
+            at
+            <%= l(Time.current, format: :default) %>
+          </p>
+        </div>
+      </main>
+      <aside>
+        <ul class="gnav">
+          <li class="active"><%= link_to "#", class: "btn btn-lg", "data-toggle" => "tooltip", "data-placement" => "right", title: "Dashboard" do %><i class="fa fa-tachometer"></i><% end %></li>
+          <li><%= link_to "#", class: "btn btn-lg", "data-toggle" => "tooltip", "data-placement" => "right", title: "Repos" do %><i class="fa fa-plus-square"></i><% end %></li>
+          <li><%= link_to "#", class: "btn btn-lg", "data-toggle" => "tooltip", "data-placement" => "right", title: "Members" do %><i class="fa fa-user-circle"></i><% end %></li>
+          <li><%= link_to "#", class: "btn btn-lg", "data-toggle" => "tooltip", "data-placement" => "right", title: "Logout" do %><i class="fa fa-power-off"></i><% end %></li>
+        </ul>
+      </aside>
+    </div>
   </body>
 </html>

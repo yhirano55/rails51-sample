@@ -1,0 +1,112 @@
+//= require_self
+
+@import url('//fonts.googleapis.com/css?family=Source+Code+Pro')
+
+//---[ variables ]---
+$font-family-base: 'Helvetica Neue', 'Helvetica', 'Arial', 'YuGothic', '游ゴシック', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', 'MS PGothic', 'sans-serif'
+
+$breadcrumb-padding-vertical: 15px
+$breadcrumb-bg: #fff
+$breadcrumb-active-color: #202020
+$breadcrumb-separator: "\f105"
+
+$line-height-base: 1.65
+
+@import "bootstrap-sprockets"
+@import "bootstrap"
+@import "font-awesome"
+
+//---[ override ]---
+
+//---[ component ]---
+
+html, body
+  height: 100%
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+body
+  background-color: #ecf0f5
+  overflow-x: hidden
+  overflow-y: auto
+
+pre
+  background: #002b36
+  border: none
+
+code, kbd, pre, samp
+  font-family: 'Source Code Pro', Menlo, Monaco, Consolas, "Courier New", monospace
+
+.wrapper
+  position: relative
+  height: 100%
+  overflow-x: hidden
+  overflow-y: auto
+
+main
+  position: relative
+  height: 100%
+  padding-left: 50px
+
+.main-header
+  z-index: 128
+  position: fixed
+  width: 100%
+  border-bottom: 1px solid #e0e0e0
+  .breadcrumb
+    margin: 0
+    border-radius: 0px
+    li:before
+      font: normal normal normal 14px/1 FontAwesome
+
+.main-content
+  padding-top: $line-height-computed + 57px
+
+.main-footer
+  width: 100%
+  padding: 15px
+  color: lighten($text-color, 50%)
+  font-size: $font-size-small
+  text-align: center
+
+aside
+  z-index: 256
+  position: fixed
+  top: 0
+  left: 0
+  width: 50px
+  min-height: 100%
+  background-color: #222d32
+
+.gnav
+  list-style: none
+  white-space: nowrap
+  overflow: hidden
+  margin: 0
+  padding: 0
+
+  a
+    display: block
+    color: lighten(#222d32, 20%)
+
+    &:hover
+      color: lighten(#222d32, 50%)
+
+  li.active
+    a
+      color: lighten(#222d32, 50%)
+
+.list-group-item > .btn-setting
+  display: inline-block
+  float: right
+
+a.quiet
+  color: $text-color
+
+.build
+  ul
+    padding-left: 0
+    list-style: none
+
+    i
+      color: lighten($text-color, 50%)

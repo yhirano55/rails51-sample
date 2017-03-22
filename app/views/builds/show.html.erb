@@ -1,0 +1,280 @@
+<div class="row build">
+  <div class="col-sm-2">
+    <p>
+      <%= link_to "#", class: "btn btn-success btn-sm btn-block" do %>
+        <i class="fa fa-check"></i> <small>SUCCESS</small>
+      <% end %>
+    </p>
+  </div>
+  <div class="col-sm-7">
+    <ul>
+      <li>company / my_ppoject / master</li>
+      <li><strong>Scheduled build</strong></li>
+      <li>Rubocop <i class="fa fa-arrow-right"></i> API Server</li>
+    </ul>
+  </div>
+  <div class="col-sm-3">
+    <ul>
+      <li><i class="fa fa-calendar-o"></i> 7 hour ago</li>
+      <li><i class="fa fa-clock-o"></i> 01:52</li>
+      <li><i class="fa fa-git"></i> <%= link_to "88bb865", "#", class: "quiet" %></li>
+    </ul>
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">ビルド情報</div>
+  <table class="table">
+    <tr>
+      <td>JOB ID</td>
+      <td>b2d9bb42-66b0-4fdf-bfec-f85315a76667</td>
+    </tr>
+    <tr>
+      <td>Payload</td>
+      <td>{}</td>
+    </tr>
+    <tr>
+      <td>Config</td>
+      <td>{"base_remote_branch"=>"master", "repository_full_name"=>"aiming/komainu", "project_directory"=>""}</td>
+    </tr>
+  </table>
+  <div class="panel-body">
+    <pre><code class="bash">reek 4.5.6
+config/application.rb -- 1 warning:
+[33]:UncommunicativeVariableName: Komainu::Application has the variable name 'g' [https://github.com/troessner/reek/blob/master/docs/Uncommunicative-Variable-Name.md]
+config/initializers/sidekiq.rb -- 2 warnings:
+[4]:IrresponsibleModule: LocalizedLoggingFormatter has no descriptive comment [https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md]
+[5]:LongParameterList: LocalizedLoggingFormatter#call has 4 parameters [https://github.com/troessner/reek/blob/master/docs/Long-Parameter-List.md]
+db/migrate/20170203081028_create_users.rb -- 4 warnings:
+[4, 5, 6, 7, 9, 11]:FeatureEnvy: CreateUsers#change refers to 't' more than self (maybe move it to another class?) [https://github.com/troessner/reek/blob/master/docs/Feature-Envy.md]
+[1]:IrresponsibleModule: CreateUsers has no descriptive comment [https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md]
+[2]:TooManyStatements: CreateUsers#change has approx 7 statements [https://github.com/troessner/reek/blob/master/docs/Too-Many-Statements.md]
+[3]:UncommunicativeVariableName: CreateUsers#change has the variable name 't' [https://github.com/troessner/reek/blob/master/docs/Uncommunicative-Variable-Name.md]
+db/migrate/20170206024410_create_owners.rb -- 4 warnings:
+[4, 5, 6, 7, 9, 11, 12]:FeatureEnvy: CreateOwners#change refers to 't' more than self (maybe move it to another class?) [https://github.com/troessner/reek/blob/master/docs/Feature-Envy.md]
+[1]:IrresponsibleModule: CreateOwners has no descriptive comment [https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md]
+[2]:TooManyStatements: CreateOwners#change has approx 8 statements [https://github.com/troessner/reek/blob/master/docs/Too-Many-Statements.md]
+[3]:UncommunicativeVariableName: CreateOwners#change has the variable name 't' [https://github.com/troessner/reek/blob/master/docs/Uncommunicative-Variable-Name.md]
+db/migrate/20170206025237_create_repositories.rb -- 4 warnings:
+[4, 5, 6, 7, 8, 9, 10, 12, 14, 15, 16]:FeatureEnvy: CreateRepositories#change refers to 't' more than self (maybe move it to another class?) [https://github.com/troessner/reek/blob/master/docs/Feature-Envy.md]
+[1]:IrresponsibleModule: CreateRepositories has no descriptive comment [https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md]
+[2]:TooManyStatements: CreateRepositories#change has approx 12 statements [https://github.com/troessner/reek/blob/master/docs/Too-Many-Statements.md]
+[3]:UncommunicativeVariableName: CreateRepositories#change has the variable name 't' [https://github.com/troessner/reek/blob/master/docs/Uncommunicative-Variable-Name.md]
+db/migrate/20170206030127_create_memberships.rb -- 3 warnings:
+[4, 5, 6]:FeatureEnvy: CreateMemberships#change refers to 't' more than self (maybe move it to another class?) [https://github.com/troessner/reek/blob/master/docs/Feature-Envy.md]
+[1]:IrresponsibleModule: CreateMemberships has no descriptive comment [https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md]
+[3]:UncommunicativeVariableName: CreateMemberships#change has the variable name 't' [https://github.com/troessner/reek/blob/master/docs/Uncommunicative-Variable-Name.md]
+db/migrate/20170206030955_add_refreshing_repos_to_users.rb -- 1 warning:
+[1]:IrresponsibleModule: AddRefreshingReposToUsers has no descriptive comment [https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md]
+db/migrate/20170207093405_add_github_id_to_users.rb -- 1 warning:
+[1]:IrresponsibleModule: AddGithubIdToUsers has no descriptive comment [https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md]
+db/migrate/20170209074224_create_builds.rb -- 4 warnings:
+[4, 5, 6, 7, 9]:FeatureEnvy: CreateBuilds#change refers to 't' more than self (maybe move it to another class?) [https://github.com/troessner/reek/blob/master/docs/Feature-Envy.md]
+[1]:IrresponsibleModule: CreateBuilds has no descriptive comment [https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md]
+[2]:TooManyStatements: CreateBuilds#change has approx 8 statements [https://github.com/troessner/reek/blob/master/docs/Too-Many-Statements.md]
+[3]:UncommunicativeVariableName: CreateBuilds#change has the variable name 't' [https://github.com/troessner/reek/blob/master/docs/Uncommunicative-Variable-Name.md]
+db/migrate/20170215160158_create_projects.rb -- 4 warnings:
+[4, 5, 6, 8]:FeatureEnvy: CreateProjects#change refers to 't' more than self (maybe move it to another class?) [https://github.com/troessner/reek/blob/master/docs/Feature-Envy.md]
+[1]:IrresponsibleModule: CreateProjects has no descriptive comment [https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md]
+[2]:TooManyStatements: CreateProjects#change has approx 6 statements [https://github.com/troessner/reek/blob/master/docs/Too-Many-Statements.md]
+[3]:UncommunicativeVariableName: CreateProjects#change has the variable name 't' [https://github.com/troessner/reek/blob/master/docs/Uncommunicative-Variable-Name.md]
+db/migrate/20170215161253_create_tasks.rb -- 4 warnings:
+[4, 5, 6, 7, 8, 10, 12]:FeatureEnvy: CreateTasks#change refers to 't' more than self (maybe move it to another class?) [https://github.com/troessner/reek/blob/master/docs/Feature-Envy.md]
+[1]:IrresponsibleModule: CreateTasks has no descriptive comment [https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md]
+[2]:TooManyStatements: CreateTasks#change has approx 8 statements [https://github.com/troessner/reek/blob/master/docs/Too-Many-Statements.md]
+[3]:UncommunicativeVariableName: CreateTasks#change has the variable name 't' [https://github.com/troessner/reek/blob/master/docs/Uncommunicative-Variable-Name.md]
+db/migrate/20170215161736_add_task_id_to_builds.rb -- 4 warnings:
+[4, 5, 6, 7, 8, 9, 10, 11, 12, 14]:FeatureEnvy: AddTaskIdToBuilds#change refers to 't' more than self (maybe move it to another class?) [https://github.com/troessner/reek/blob/master/docs/Feature-Envy.md]
+[1]:IrresponsibleModule: AddTaskIdToBuilds has no descriptive comment [https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md]
+[2]:TooManyStatements: AddTaskIdToBuilds#change has approx 12 statements [https://github.com/troessner/reek/blob/master/docs/Too-Many-Statements.md]
+[3]:UncommunicativeVariableName: AddTaskIdToBuilds#change has the variable name 't' [https://github.com/troessner/reek/blob/master/docs/Uncommunicative-Variable-Name.md]
+db/migrate/20170218023544_remove_hook_id_from_repositories.rb -- 1 warning:
+[1]:IrresponsibleModule: RemoveHookIdFromRepositories has no descriptive comment [https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md]
+db/migrate/20170222005215_create_strategies.rb -- 3 warnings:
+[4, 5, 6, 7]:FeatureEnvy: CreateStrategies#change refers to 't' more than self (maybe move it to another class?) [https://github.com/troessner/reek/blob/master/docs/Feature-Envy.md]
+[1]:IrresponsibleModule: CreateStrategies has no descriptive comment [https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md]
+[3]:UncommunicativeVariableName: CreateStrategies#change has the variable name 't' [https://github.com/troessner/reek/blob/master/docs/Uncommunicative-Variable-Name.md]
+db/migrate/20170224032724_add_full_name_to_repositories.rb -- 1 warning:
+[1]:IrresponsibleModule: AddFullNameToRepositories has no descriptive comment [https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md]
+db/migrate/20170224050717_add_change_state_to_tasks.rb -- 1 warning:
+[1]:IrresponsibleModule: AddChangeStateToTasks has no descriptive comment [https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md]
+db/migrate/20170224053554_rename_columns_on_builds.rb -- 1 warning:
+[1]:IrresponsibleModule: RenameColumnsOnBuilds has no descriptive comment [https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md]
+db/migrate/20170301050610_change_properties_in_strategies.rb -- 1 warning:
+[1]:IrresponsibleModule: ChangePropertiesInStrategies has no descriptive comment [https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md]
+db/migrate/20170301064756_add_null_option_to_private_in_repositories.rb -- 1 warning:
+[1]:IrresponsibleModule: AddNullOptionToPrivateInRepositories has no descriptive comment [https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md]
+db/migrate/20170303063925_add_notifiable_to_tasks.rb -- 1 warning:
+[1]:IrresponsibleModule: AddNotifiableToTasks has no descriptive comment [https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md]
+db/migrate/20170307090933_change_column_event_to_trigger_on_tasks.rb -- 1 warning:
+[1]:IrresponsibleModule: ChangeColumnEventToTriggerOnTasks has no descriptive comment [https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md]
+lib/generators/strategy/strategy_generator.rb -- 2 warnings:
+[6, 7]:DuplicateMethodCall: StrategyGenerator#create_docker calls 'File.join("docker", file_name, "run.sh")' 2 times [https://github.com/troessner/reek/blob/master/docs/Duplicate-Method-Call.md]
+[1]:IrresponsibleModule: StrategyGenerator has no descriptive comment [https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md]
+lib/github/collaboratable.rb -- 1 warning:
+[2]:IrresponsibleModule: Github::Collaboratable has no descriptive comment [https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md]
+lib/github/hookable.rb -- 3 warnings:
+[2]:IrresponsibleModule: Github::Hookable has no descriptive comment [https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md]
+[5]:TooManyStatements: Github::Hookable#create_hook has approx 6 statements [https://github.com/troessner/reek/blob/master/docs/Too-Many-Statements.md]
+[18]:UncommunicativeVariableName: Github::Hookable#create_hook has the variable name 'e' [https://github.com/troessner/reek/blob/master/docs/Uncommunicative-Variable-Name.md]
+lib/github/status_creatable.rb -- 2 warnings:
+[2]:IrresponsibleModule: Github::StatusCreatable has no descriptive comment [https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md]
+[5]:LongParameterList: Github::StatusCreatable#create_status has 6 parameters [https://github.com/troessner/reek/blob/master/docs/Long-Parameter-List.md]
+lib/github_api.rb -- 1 warning:
+[1]:IrresponsibleModule: GithubApi has no descriptive comment [https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md]
+lib/slack_notification.rb -- 1 warning:
+[1]:IrresponsibleModule: SlackNotification has no descriptive comment [https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md]
+app/channels/application_cable/channel.rb -- 1 warning:
+[2]:IrresponsibleModule: ApplicationCable::Channel has no descriptive comment [https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md]
+app/channels/application_cable/connection.rb -- 1 warning:
+[2]:IrresponsibleModule: ApplicationCable::Connection has no descriptive comment [https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md]
+app/controllers/application_controller.rb -- 1 warning:
+[1]:IrresponsibleModule: ApplicationController has no descriptive comment [https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md]
+app/controllers/builds_controller.rb -- 1 warning:
+[1]:IrresponsibleModule: BuildsController has no descriptive comment [https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md]
+app/controllers/errors_controller.rb -- 1 warning:
+[1]:IrresponsibleModule: ErrorsController has no descriptive comment [https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md]
+app/controllers/home_controller.rb -- 1 warning:
+[1]:IrresponsibleModule: HomeController has no descriptive comment [https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md]
+app/controllers/projects_controller.rb -- 2 warnings:
+[1]:InstanceVariableAssumption: ProjectsController assumes too much for instance variable '@project' [https://github.com/troessner/reek/blob/master/docs/Instance-Variable-Assumption.md]
+[1]:IrresponsibleModule: ProjectsController has no descriptive comment [https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md]
+app/controllers/repositories/activations_controller.rb -- 2 warnings:
+[1]:IrresponsibleModule: Repositories::ActivationsController has no descriptive comment [https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md]
+[2]:UncommunicativeVariableName: Repositories::ActivationsController has the variable name 'e' [https://github.com/troessner/reek/blob/master/docs/Uncommunicative-Variable-Name.md]
+app/controllers/repositories/deactivations_controller.rb -- 2 warnings:
+[1]:IrresponsibleModule: Repositories::DeactivationsController has no descriptive comment [https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md]
+[2]:UncommunicativeVariableName: Repositories::DeactivationsController has the variable name 'e' [https://github.com/troessner/reek/blob/master/docs/Uncommunicative-Variable-Name.md]
+app/controllers/repositories_controller.rb -- 1 warning:
+[1]:IrresponsibleModule: RepositoriesController has no descriptive comment [https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md]
+app/controllers/repository_syncs_controller.rb -- 1 warning:
+[1]:IrresponsibleModule: RepositorySyncsController has no descriptive comment [https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md]
+app/controllers/sessions_controller.rb -- 3 warnings:
+[1]:IrresponsibleModule: SessionsController has no descriptive comment [https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md]
+[2]:UncommunicativeVariableName: SessionsController has the variable name 'e' [https://github.com/troessner/reek/blob/master/docs/Uncommunicative-Variable-Name.md]
+[21]:UncommunicativeVariableName: SessionsController#user has the variable name 'u' [https://github.com/troessner/reek/blob/master/docs/Uncommunicative-Variable-Name.md]
+app/controllers/tasks/activations_controller.rb -- 2 warnings:
+[1]:IrresponsibleModule: Tasks::ActivationsController has no descriptive comment [https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md]
+[2]:UncommunicativeVariableName: Tasks::ActivationsController has the variable name 'e' [https://github.com/troessner/reek/blob/master/docs/Uncommunicative-Variable-Name.md]
+app/controllers/tasks/builds_controller.rb -- 1 warning:
+[1]:IrresponsibleModule: Tasks::BuildsController has no descriptive comment [https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md]
+app/controllers/tasks/deactivations_controller.rb -- 2 warnings:
+[1]:IrresponsibleModule: Tasks::DeactivationsController has no descriptive comment [https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md]
+[2]:UncommunicativeVariableName: Tasks::DeactivationsController has the variable name 'e' [https://github.com/troessner/reek/blob/master/docs/Uncommunicative-Variable-Name.md]
+app/controllers/tasks_controller.rb -- 2 warnings:
+[1]:InstanceVariableAssumption: TasksController assumes too much for instance variable '@task' [https://github.com/troessner/reek/blob/master/docs/Instance-Variable-Assumption.md]
+[1]:IrresponsibleModule: TasksController has no descriptive comment [https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md]
+app/controllers/users_controller.rb -- 1 warning:
+[1]:IrresponsibleModule: UsersController has no descriptive comment [https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md]
+app/helpers/application_helper.rb -- 1 warning:
+[1]:IrresponsibleModule: ApplicationHelper has no descriptive comment [https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md]
+app/jobs/build_job.rb -- 2 warnings:
+[1]:IrresponsibleModule: BuildJob has no descriptive comment [https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md]
+[4]:UtilityFunction: BuildJob#perform doesn't depend on instance state (maybe move it to another class?) [https://github.com/troessner/reek/blob/master/docs/Utility-Function.md]
+app/jobs/execute_job.rb -- 2 warnings:
+[1]:IrresponsibleModule: ExecuteJob has no descriptive comment [https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md]
+[4]:UtilityFunction: ExecuteJob#perform doesn't depend on instance state (maybe move it to another class?) [https://github.com/troessner/reek/blob/master/docs/Utility-Function.md]
+app/jobs/repository_sync_job.rb -- 2 warnings:
+[1]:IrresponsibleModule: RepositorySyncJob has no descriptive comment [https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md]
+[4]:UtilityFunction: RepositorySyncJob#perform doesn't depend on instance state (maybe move it to another class?) [https://github.com/troessner/reek/blob/master/docs/Utility-Function.md]
+app/models/commit_status.rb -- 3 warnings:
+[4, 8, 12, 18]:DataClump: CommitStatus takes parameters ['context', 'description', 'target_url'] to 4 methods [https://github.com/troessner/reek/blob/master/docs/Data-Clump.md]
+[1]:IrresponsibleModule: CommitStatus has no descriptive comment [https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md]
+[18]:LongParameterList: CommitStatus#create_status has 4 parameters [https://github.com/troessner/reek/blob/master/docs/Long-Parameter-List.md]
+app/models/concerns/state_manager.rb -- 1 warning:
+[1]:IrresponsibleModule: StateManager has no descriptive comment [https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md]
+app/models/constants.rb -- 1 warning:
+[1]:IrresponsibleModule: Constants has no descriptive comment [https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md]
+app/models/payload.rb -- 2 warnings:
+[1]:IrresponsibleModule: Payload has no descriptive comment [https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md]
+[1]:TooManyMethods: Payload has at least 21 methods [https://github.com/troessner/reek/blob/master/docs/Too-Many-Methods.md]
+app/models/pull_request.rb -- 1 warning:
+[1]:IrresponsibleModule: PullRequest has no descriptive comment [https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md]
+app/models/repository_activator.rb -- 1 warning:
+[1]:IrresponsibleModule: RepositoryActivator has no descriptive comment [https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md]
+app/models/repository_deactivator.rb -- 1 warning:
+[1]:IrresponsibleModule: RepositoryDeactivator has no descriptive comment [https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md]
+app/models/repository_sync.rb -- 5 warnings:
+[1]:IrresponsibleModule: RepositorySync has no descriptive comment [https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md]
+[5]:TooManyStatements: RepositorySync#call has approx 6 statements [https://github.com/troessner/reek/blob/master/docs/Too-Many-Statements.md]
+[38]:TooManyStatements: RepositorySync#upsert_repository has approx 8 statements [https://github.com/troessner/reek/blob/master/docs/Too-Many-Statements.md]
+[29]:UtilityFunction: RepositorySync#upsert_owner doesn't depend on instance state (maybe move it to another class?) [https://github.com/troessner/reek/blob/master/docs/Utility-Function.md]
+[38]:UtilityFunction: RepositorySync#upsert_repository doesn't depend on instance state (maybe move it to another class?) [https://github.com/troessner/reek/blob/master/docs/Utility-Function.md]
+app/models/repository_updater.rb -- 1 warning:
+[1]:IrresponsibleModule: RepositoryUpdater has no descriptive comment [https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md]
+app/models/requested_build_reserver.rb -- 1 warning:
+[1]:IrresponsibleModule: RequestedBuildReserver has no descriptive comment [https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md]
+app/models/runner/base.rb -- 1 warning:
+[2]:IrresponsibleModule: Runner::Base has no descriptive comment [https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md]
+app/models/runner/brakeman.rb -- 2 warnings:
+[2]:IrresponsibleModule: Runner::Brakeman has no descriptive comment [https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md]
+[23]:UtilityFunction: Runner::Brakeman#github_token doesn't depend on instance state (maybe move it to another class?) [https://github.com/troessner/reek/blob/master/docs/Utility-Function.md]
+app/models/runner/bundle_outdated.rb -- 2 warnings:
+[2]:IrresponsibleModule: Runner::BundleOutdated has no descriptive comment [https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md]
+[23]:UtilityFunction: Runner::BundleOutdated#github_token doesn't depend on instance state (maybe move it to another class?) [https://github.com/troessner/reek/blob/master/docs/Utility-Function.md]
+app/models/runner/null.rb -- 1 warning:
+[2]:IrresponsibleModule: Runner::Null has no descriptive comment [https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md]
+app/models/runner/pronto.rb -- 2 warnings:
+[2]:IrresponsibleModule: Runner::Pronto has no descriptive comment [https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md]
+[23]:UtilityFunction: Runner::Pronto#github_token doesn't depend on instance state (maybe move it to another class?) [https://github.com/troessner/reek/blob/master/docs/Utility-Function.md]
+app/models/runner/rails_best_practices.rb -- 2 warnings:
+[2]:IrresponsibleModule: Runner::RailsBestPractices has no descriptive comment [https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md]
+[23]:UtilityFunction: Runner::RailsBestPractices#github_token doesn't depend on instance state (maybe move it to another class?) [https://github.com/troessner/reek/blob/master/docs/Utility-Function.md]
+app/models/runner/rake_notes.rb -- 2 warnings:
+[2]:IrresponsibleModule: Runner::RakeNotes has no descriptive comment [https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md]
+[23]:UtilityFunction: Runner::RakeNotes#github_token doesn't depend on instance state (maybe move it to another class?) [https://github.com/troessner/reek/blob/master/docs/Utility-Function.md]
+app/models/runner/reek.rb -- 2 warnings:
+[2]:IrresponsibleModule: Runner::Reek has no descriptive comment [https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md]
+[23]:UtilityFunction: Runner::Reek#github_token doesn't depend on instance state (maybe move it to another class?) [https://github.com/troessner/reek/blob/master/docs/Utility-Function.md]
+app/models/runner/rubocop.rb -- 2 warnings:
+[2]:IrresponsibleModule: Runner::Rubocop has no descriptive comment [https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md]
+[23]:UtilityFunction: Runner::Rubocop#github_token doesn't depend on instance state (maybe move it to another class?) [https://github.com/troessner/reek/blob/master/docs/Utility-Function.md]
+app/models/runner/ruby_version.rb -- 1 warning:
+[2]:IrresponsibleModule: Runner::RubyVersion has no descriptive comment [https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md]
+app/models/runner/tachikoma.rb -- 3 warnings:
+[19, 21]:DuplicateMethodCall: Runner::Tachikoma#command calls 'config['bundler_parallel_number']' 2 times [https://github.com/troessner/reek/blob/master/docs/Duplicate-Method-Call.md]
+[2]:IrresponsibleModule: Runner::Tachikoma has no descriptive comment [https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md]
+[27]:UtilityFunction: Runner::Tachikoma#github_token doesn't depend on instance state (maybe move it to another class?) [https://github.com/troessner/reek/blob/master/docs/Utility-Function.md]
+app/models/schedule.rb -- 1 warning:
+[1]:IrresponsibleModule: Schedule has no descriptive comment [https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md]
+app/models/scheduled_job.rb -- 1 warning:
+[1]:IrresponsibleModule: ScheduledJob has no descriptive comment [https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md]
+app/models/strategies/tachikoma.rb -- 2 warnings:
+[38, 40, 42, 43]:DuplicateMethodCall: Strategies::Tachikoma#config calls 'Constants.strategy' 4 times [https://github.com/troessner/reek/blob/master/docs/Duplicate-Method-Call.md]
+[38, 40, 42, 43]:DuplicateMethodCall: Strategies::Tachikoma#config calls 'Constants.strategy.default' 4 times [https://github.com/troessner/reek/blob/master/docs/Duplicate-Method-Call.md]
+app/models/strategy.rb -- 4 warnings:
+[54, 55, 56]:DuplicateMethodCall: Strategy#property calls 'self.local_stored_attributes' 3 times [https://github.com/troessner/reek/blob/master/docs/Duplicate-Method-Call.md]
+[55, 56]:DuplicateMethodCall: Strategy#property calls 'self.local_stored_attributes[:properties]' 2 times [https://github.com/troessner/reek/blob/master/docs/Duplicate-Method-Call.md]
+[41, 41]:FeatureEnvy: Strategy#inherited refers to 'child' more than self (maybe move it to another class?) [https://github.com/troessner/reek/blob/master/docs/Feature-Envy.md]
+[44]:TooManyStatements: Strategy#property has approx 8 statements [https://github.com/troessner/reek/blob/master/docs/Too-Many-Statements.md]
+app/models/task_activator.rb -- 2 warnings:
+[1]:IrresponsibleModule: TaskActivator has no descriptive comment [https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md]
+[11]:TooManyStatements: TaskActivator#call has approx 6 statements [https://github.com/troessner/reek/blob/master/docs/Too-Many-Statements.md]
+app/models/task_deactivator.rb -- 1 warning:
+[1]:IrresponsibleModule: TaskDeactivator has no descriptive comment [https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md]
+app/queries/repository_with_administrator_privilege_query.rb -- 1 warning:
+[1]:IrresponsibleModule: RepositoryWithAdministratorPrivilegeQuery has no descriptive comment [https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md]
+app/validators/directory_validator.rb -- 2 warnings:
+[1]:IrresponsibleModule: DirectoryValidator has no descriptive comment [https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md]
+[2]:UtilityFunction: DirectoryValidator#validate_each doesn't depend on instance state (maybe move it to another class?) [https://github.com/troessner/reek/blob/master/docs/Utility-Function.md]
+app/validators/member_of_permitted_organizations_validator.rb -- 2 warnings:
+[1]:IrresponsibleModule: MemberOfPermittedOrganizationsValidator has no descriptive comment [https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md]
+[2]:UtilityFunction: MemberOfPermittedOrganizationsValidator#validate doesn't depend on instance state (maybe move it to another class?) [https://github.com/troessner/reek/blob/master/docs/Utility-Function.md]
+app/validators/schedule_validator.rb -- 2 warnings:
+[1]:IrresponsibleModule: ScheduleValidator has no descriptive comment [https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md]
+[2]:UtilityFunction: ScheduleValidator#validate_each doesn't depend on instance state (maybe move it to another class?) [https://github.com/troessner/reek/blob/master/docs/Utility-Function.md]
+app/validators/slack_channel_validator.rb -- 2 warnings:
+[1]:IrresponsibleModule: SlackChannelValidator has no descriptive comment [https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md]
+[2]:UtilityFunction: SlackChannelValidator#validate_each doesn't depend on instance state (maybe move it to another class?) [https://github.com/troessner/reek/blob/master/docs/Utility-Function.md]
+spec/models/strategy_spec.rb -- 1 warning:
+[56]:IrresponsibleModule: Dummy has no descriptive comment [https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md]
+spec/support/omni_auth.rb -- 1 warning:
+[3]:UtilityFunction: set_omniauth_as doesn't depend on instance state (maybe move it to another class?) [https://github.com/troessner/reek/blob/master/docs/Utility-Function.md]
+spec/support/payload.rb -- 4 warnings:
+[8, 11]:DuplicateMethodCall: stub_payload_attribute calls 'Faker::Lorem.characters(10)' 2 times [https://github.com/troessner/reek/blob/master/docs/Duplicate-Method-Call.md]
+[16, 23]:DuplicateMethodCall: stub_payload_attribute calls 'Faker::Name.name' 2 times [https://github.com/troessner/reek/blob/master/docs/Duplicate-Method-Call.md]
+[4, 15, 22]:DuplicateMethodCall: stub_payload_attribute calls 'Faker::Number.number(6)' 3 times [https://github.com/troessner/reek/blob/master/docs/Duplicate-Method-Call.md]
+[1]:UtilityFunction: stub_payload_attribute doesn't depend on instance state (maybe move it to another class?) [https://github.com/troessner/reek/blob/master/docs/Utility-Function.md]
+152 total warnings</code></pre>
+  </div>
+</div>
