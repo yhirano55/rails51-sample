@@ -2,6 +2,9 @@
   <div class="col-md-3">
     <div class="panel panel-default">
       <div class="panel-heading"><strong>プロジェクト</strong></div>
+      <div class="panel-body">
+        <small>リポジトリにあるプロジェクトを追加してください。ルートにある唯一のプロジェクトの場合も、追加は必要です。</small>
+      </div>
       <ul class="list-group">
         <li class="list-group-item">
           <%= link_to "#", class: "btn-setting quiet", "data-toggle" => "tooltip", "data-placement" => "top", title: "Edit" do %><i class="fa fa-edit"></i><% end %>
@@ -26,6 +29,9 @@
   <div class="col-md-9">
     <div class="panel panel-default">
       <div class="panel-heading"><strong>タスク</strong></div>
+      <div class="panel-body">
+        <small>プロジェクト追加後、タスクが登録できます。登録されたタスクを基に、ビルドが実行されます。</small>
+      </div>
       <ul class="list-group">
         <% 3.times.each do %>
         <!--有効-->
