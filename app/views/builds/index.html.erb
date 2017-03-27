@@ -5,7 +5,7 @@
       <ul class="list-group">
         <% 10.times do %>
           <li class="list-group-item">
-            <%= link_to "#", class: "btn-setting quiet", "data-toggle" => "tooltip", "data-placement" => "top", title: "Setting" do %><i class="fa fa-cog"></i><% end %>
+            <%= link_to tasks_path, class: "btn-setting quiet", "data-toggle" => "tooltip", "data-placement" => "top", title: "Setting" do %><i class="fa fa-cog"></i><% end %>
             <%= link_to "user/name", "#" %>
           </li>
         <% end %>
