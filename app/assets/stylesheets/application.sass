@@ -1,6 +1,7 @@
 //= require_self
 
 @import url('//fonts.googleapis.com/css?family=Source+Code+Pro')
+@import url('//fonts.googleapis.com/css?family=Pacifico')
 
 //---[ variables ]---
 $font-family-base: 'Helvetica Neue', 'Helvetica', 'Arial', 'YuGothic', '游ゴシック', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', 'MS PGothic', 'sans-serif'
@@ -17,7 +18,7 @@ $line-height-base: 1.65
 @import "font-awesome"
 
 //---[ custom vars ]---
-$btn-black-bg:     $text-color
+$btn-black-bg:     $gray-darker
 $btn-black-border: darken($btn-black-bg, 5%)
 $btn-black-color:  #fff
 $btn-gray-bg:      lighten($gray-base, 75%)
@@ -62,7 +63,7 @@ html, body
   -moz-osx-font-smoothing: grayscale
 
 body
-  background-color: #ecf0f5
+  background: #ecf0f5
   overflow-x: hidden
   overflow-y: auto
 
@@ -81,6 +82,22 @@ img.inline-block
   height: 100%
   overflow-x: hidden
   overflow-y: auto
+
+#login
+  width: 100%
+  background-color: #222d32
+  h1
+    color: #fff
+    font-family: 'Pacifico', cursive
+  .alert
+    margin: 25px 0 0 0
+  .container-fluid
+    position: relative
+    top: 50%
+    width: 100%
+    -webkit-transform: translateY(-50%)
+    transform: translateY(-50%)
+    text-align: center
 
 main
   position: relative
