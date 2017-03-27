@@ -14,13 +14,24 @@
       <main>
         <!--共通要素-->
         <div class="main-header">
-          <ol class="breadcrumb">
-            <li><a href="#">Dashboard</a></li>
-            <li><a href="#">user</a></li>
-            <li><a href="#">name</a></li>
-            <li><a href="#">project</a></li>
-            <li class="active"><strong>build 787</strong></li>
-          </ol>
+          <div class="row">
+            <div class="col-md-9">
+              <ol class="breadcrumb">
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">user</a></li>
+                <li><a href="#">name</a></li>
+                <li><a href="#">project</a></li>
+                <li class="active"><strong>build 787</strong></li>
+              </ol>
+            </div>
+            <% if content_for?(:primary_action) %>
+              <div class="col-md-3">
+                <div class="primary-action">
+                  <%= yield(:primary_action) %>
+                </div>
+              </div>
+            <% end %>
+          </div>
         </div>
         <div class="main-content">
           <div class="container-fluid">

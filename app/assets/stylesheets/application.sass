@@ -16,9 +16,43 @@ $line-height-base: 1.65
 @import "bootstrap"
 @import "font-awesome"
 
+//---[ custom vars ]---
+$btn-black-bg:     $text-color
+$btn-black-border: darken($btn-black-bg, 5%)
+$btn-black-color:  #fff
+$btn-gray-bg:      lighten($gray-base, 75%)
+$btn-gray-border:  darken($btn-gray-bg, 5%)
+$btn-gray-color:   #fff
+
 //---[ override ]---
 .pagination
   margin-top: 0
+
+//---[ button ]---
+span
+  &.btn
+    cursor: default
+
+.btn-black
+  @include button-variant($btn-black-color, $btn-black-bg, $btn-black-border)
+
+.btn-gray
+  @include button-variant($btn-gray-color, $btn-gray-bg, $btn-gray-border)
+
+.btn-primary-outlined
+  @include button-variant($btn-primary-border, transparent, $btn-primary-bg)
+
+.btn-success-outlined
+  @include button-variant($btn-success-border, transparent, $btn-success-bg)
+
+.btn-info-outlined
+  @include button-variant($btn-info-border, transparent, $btn-info-bg)
+
+.btn-warning-outlined
+  @include button-variant($btn-warning-border, transparent, $btn-warning-bg)
+
+.btn-danger-outlined
+  @include button-variant($btn-danger-border, transparent, $btn-danger-bg)
 
 //---[ component ]---
 
@@ -51,18 +85,18 @@ main
   padding-left: 50px
 
 .main-header
-  z-index: 128
-  position: fixed
-  width: 100%
+  background: #fff
   border-bottom: 1px solid #e0e0e0
   .breadcrumb
     margin: 0
     border-radius: 0px
     li:before
       font: normal normal normal 14px/1 FontAwesome
+  .primary-action
+    padding: 12px 15px
 
 .main-content
-  padding-top: $line-height-computed + 57px
+  padding-top: $line-height-computed
 
 .main-footer
   width: 100%
@@ -106,11 +140,8 @@ a.quiet
   color: $text-color
 
 .build
-  p.strategy-name
-    margin: 0 0 5px 0
-    line-height: 1.5
   table
-    margin: 10px 0 0 0
+    margin: 0
     table-layout: fixed
     thead, tbody
       th, td

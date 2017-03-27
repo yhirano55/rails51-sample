@@ -21,7 +21,7 @@
           <div class="row build">
             <div class="col-sm-2">
               <p>
-                <%= link_to build_path(1), class: "btn btn-success btn-sm btn-block" do %>
+                <%= link_to build_path(1), class: "btn btn-success btn-xs btn-block" do %>
                   <i class="fa fa-check"></i> <small>SUCCESS</small>
                 <% end %>
               </p>
@@ -35,9 +35,9 @@
             </div>
             <div class="col-sm-3">
               <ul>
-                <li><i class="fa fa-calendar-o"></i> 7 hour ago</li>
-                <li><i class="fa fa-clock-o"></i> 01:52</li>
-                <li><i class="fa fa-git"></i> <%= link_to "88bb865", "#", class: "quiet" %></li>
+                <li><i class="fa fa-calendar-o"></i> <small>7 hour ago</small></li>
+                <li><i class="fa fa-clock-o"></i> <small>01:52</small></li>
+                <li><i class="fa fa-git"></i> <small><%= link_to "88bb865", "#" %></small></li>
               </ul>
             </div>
           </div>

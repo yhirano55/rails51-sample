@@ -17,7 +17,7 @@
         </li>
       </ul>
       <div class="panel-body">
-        <%= link_to "#", class: "btn btn-primary btn-sm btn-block" do %>
+        <%= link_to "#", class: "btn btn-primary-outlined btn-sm btn-block" do %>
           <i class="fa fa-plus-square"></i> <small>プロジェクトを追加</small>
         <% end %>
       </div>
@@ -33,21 +33,24 @@
           <div class="row build">
             <div class="col-sm-2">
               <p>
-                <%= link_to build_path(1), class: "btn btn-info btn-xs btn-block" do %>
+                <span class="btn btn-black btn-xs btn-block">
                   <i class="fa fa-clock-o"></i> <small>定期実行</small>
-                <% end %>
-                <%= link_to build_path(1), class: "btn btn-success btn-xs btn-block" do %>
-                  <small>有効</small>
+                </span>
+                <span class="btn btn-success btn-xs btn-block">
+                  <i class="fa fa-check"></i> <small>有効</small>
+                </span>
+                <%= link_to build_path(1), class: "btn btn-default btn-xs btn-block" do %>
+                  <i class="fa fa-unlink"></i> <small>無効にする</small>
                 <% end %>
               </p>
             </div>
             <div class="col-sm-10">
-              <p class="strategy-name"><strong>Rubocop</strong></p>
-              <%= link_to build_path(1), class: "btn btn-default btn-xs" do %>
-                <i class="fa fa-unlink"></i> <small>無効にする</small>
-              <% end %>
               <table class="table table-striped">
                 <tbody>
+                  <tr>
+                    <th scope="row">ストラテジー</th>
+                    <td>Rubocop</td>
+                  </tr>
                   <tr>
                     <th scope="row">プロジェクト</th>
                     <td>API Server</td>
@@ -74,24 +77,27 @@
           <div class="row build">
             <div class="col-sm-2">
               <p>
-                <%= link_to build_path(1), class: "btn btn-info btn-xs btn-block" do %>
+                <span class="btn btn-black btn-xs btn-block">
                   <i class="fa fa-bolt"></i> <small>プルリクエスト</small>
+                </span>
+                <span class="btn btn-gray btn-xs btn-block">
+                  <small>無効</small>
+                </span>
+                <%= link_to build_path(1), class: "btn btn-success-outlined btn-xs btn-block" do %>
+                  <i class="fa fa-link"></i> <small>有効にする</small>
                 <% end %>
                 <%= link_to build_path(1), class: "btn btn-default btn-xs btn-block" do %>
-                  <small>無効</small>
+                  <i class="fa fa-edit"></i> <small>編集する</small>
                 <% end %>
               </p>
             </div>
             <div class="col-sm-10">
-              <p class="strategy-name"><strong>Rubocop</strong></p>
-              <%= link_to build_path(1), class: "btn btn-success btn-xs" do %>
-                <i class="fa fa-link"></i> <small>有効にする</small>
-              <% end %>
-              <%= link_to build_path(1), class: "btn btn-default btn-xs" do %>
-                <i class="fa fa-edit"></i> <small>編集する</small>
-              <% end %>
               <table class="table table-striped">
                 <tbody>
+                  <tr>
+                    <th scope="row">ストラテジー</th>
+                    <td>Rubocop</td>
+                  </tr>
                   <tr>
                     <th scope="row">プロジェクト</th>
                     <td>API Server</td>
@@ -138,3 +144,10 @@
     </nav>
   </div>
 </div>
+
+<% content_for(:primary_action) do %>
+  <%= link_to "#", class: "btn btn-primary-outlined btn-sm btn-block" do %>
+    <i class="fa fa-plus-square"></i>
+    <small>タスクを追加</small>
+  <% end %>
+<% end %>
