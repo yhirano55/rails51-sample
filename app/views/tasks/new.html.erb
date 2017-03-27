@@ -1,0 +1,93 @@
+<div class="row">
+  <div class="col-md-2"></div>
+  <div class="col-md-8">
+    <div class="panel panel-default">
+      <div class="panel-heading"><strong>タスクの作成</strong></div>
+      <div class="panel-body">
+        <form>
+          <div class="alert alert-warning" role="alert">
+            <ul>
+              <li>エラー</li>
+              <li>エラー</li>
+              <li>エラー</li>
+            </ul>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="exampleInputFile">プロジェクト</label>
+                <select class="form-control">
+                  <option>選択してください</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <div>
+                  <label>トリガー</label>
+                </div>
+                <label class="radio-inline">
+                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked> プルリクエスト
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"> 定期実行
+                </label>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">定期実行スケジュール</label>
+                <input type="text" class="form-control" id="exampleInputPassword1">
+                <p class="help-block">Example block-level help text here.</p>
+              </div>
+              <div class="form-group">
+                <div>
+                  <label>コミットステータスの変更</label>
+                </div>
+                <label class="radio-inline">
+                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked> 変更する
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"> 変更しない
+                </label>
+              </div>
+              <div class="form-group">
+                <div>
+                  <label>結果の通知</label>
+                </div>
+                <label class="radio-inline">
+                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked> 通知する
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"> 通知しない
+                </label>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">通知先チャンネル</label>
+                <input type="text" class="form-control" id="exampleInputPassword1">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="exampleInputFile">ストラテジー</label>
+                <select class="form-control">
+                  <option>選択してください</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">チェックアウトするベースブランチ</label>
+                <input type="text" class="form-control" id="exampleInputPassword1">
+              </div>
+            </div>
+          </div>
+          <input type="submit" value="タスクを登録" class="btn btn-primary" />
+          <%= link_to "キャンセル", "#", class: "btn btn-default" %>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
