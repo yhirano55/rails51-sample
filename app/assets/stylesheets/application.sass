@@ -89,6 +89,7 @@ img.inline-block
   h1
     color: #fff
     font-family: 'Pacifico', cursive
+    font-size: 5em
   .alert
     margin: 25px 0 0 0
   .container-fluid
@@ -105,6 +106,11 @@ main
   padding-left: 50px
 
 .main-header
+  position: fixed
+  z-index: 128
+  top: 0
+  left: 50px
+  right: 0
   background: #fff
   border-bottom: 1px solid #e0e0e0
   .breadcrumb
@@ -116,7 +122,7 @@ main
     padding: 12px 15px
 
 .main-content
-  padding-top: $line-height-computed
+  padding-top: $line-height-computed + 57px
 
 .main-footer
   width: 100%
